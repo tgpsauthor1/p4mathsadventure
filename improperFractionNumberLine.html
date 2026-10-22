@@ -1,0 +1,123 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Improper fractions on a number line</title><style>
+*{box-sizing:border-box}body{margin:0;background:#eef4fa;color:#20334b;font:20px Arial,sans-serif}main{max-width:960px;margin:20px auto;padding:24px;background:white;border-radius:24px;box-shadow:0 8px 35px #2342}header,footer,.actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}header{border-bottom:2px solid #e8edf5;padding-bottom:14px}h1{font-size:23px;margin:0}h2{font-size:27px;line-height:1.3;margin:20px 0 12px}button{font:inherit;background:#244f91;color:white;border:2px solid #244f91;border-radius:12px;padding:12px 20px;min-height:48px;cursor:pointer}button.secondary{background:white;color:#244f91}button:focus-visible,input:focus-visible{outline:4px solid #efad26;outline-offset:3px}.small{font-size:16px}#progress{font-size:16px}.diagram{margin:8px 0}.diagram svg{width:100%;height:auto;display:block}.mixed{display:inline-flex;align-items:center;gap:12px;white-space:nowrap}.fraction{display:flex;flex-direction:column;align-items:center;gap:6px}.bar{height:3px;background:#23334b;width:80px}.answer{display:flex;justify-content:center;align-items:center;gap:18px;margin:16px 0}input{width:80px;height:58px;border:3px solid #b87908;background:#fff3ce;border-radius:10px;text-align:center;font:700 30px Arial;color:#20334b}input:disabled{border:1px solid #c5cfdb;background:#edf1f6;color:#20334b}.value{width:80px;text-align:center;font-size:30px;font-weight:bold}.note{padding:16px;background:#eaf2ff;border-radius:14px;line-height:1.5;margin:12px 0}.actions{justify-content:center}#feedback{font-weight:bold;min-height:30px;margin:12px 0;text-align:center}footer{margin-top:18px;color:#51637b}.steps{display:flex;gap:8px;flex-wrap:wrap;font-size:17px}.steps span{padding:8px 12px;background:#edf2f8;border-radius:10px}.steps .current{border:2px solid #244f91}.gaprow{display:flex;margin:0 7.32%;gap:0}.gaprow button{padding:0;border-radius:8px;background:#fff7df;border:2px dashed #98701e;color:#244f91;flex:1;min-width:0;font-size:23px}.gaprow button[aria-pressed=true]{background:#dcecfb;border:3px solid #245291}.gaplabel{text-align:center;font-size:16px;margin-top:8px}.memory{line-height:1.6}.worked{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.worked span{background:#edf4fc;padding:10px;border-radius:10px} @media(max-width:600px){main{margin:8px;padding:16px}h2{font-size:23px}header{gap:8px}h1{font-size:21px}.diagram{overflow:auto}.diagram svg{min-width:450px}.gaprow{min-width:384px;margin-left:33px;margin-right:33px}.linewrap{overflow:auto}.bar,input,.value{width:68px}.small{font-size:15px}}
+
+[hidden]{display:none!important}.fraction{display:inline-flex;vertical-align:middle}.fraction .value{font-size:27px}.fraction.smallfrac .value{font-size:22px;width:48px}.smallfrac .bar{width:48px}.linewrap{overflow-x:auto}.lineinner{min-width:600px}.lineinner svg{width:100%;display:block}.gaprow{margin:0 40px;min-width:0}.gaprow button{min-height:46px;font-size:16px;border-radius:6px}.gaprow button[aria-pressed=true]{background:#cfebf5}.gaprow button:disabled{opacity:1;cursor:default;border:0;background:transparent;color:#20334b}.gaprow button.shown{background:#cee6f5;border-bottom:4px solid #24739c}.band{background:#edf4fc;border-left:5px solid #24739c;padding:14px;margin:12px 0;border-radius:8px}.equation{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;font-size:27px}.record{font-size:18px;margin:8px 0}.slot{width:80px;background:#fff3ce;color:#20334b;border-color:#b87908;font-weight:bold}.slot.active{outline:4px solid #4b96bb}.caption{font-size:17px;text-align:center;margin:8px 0}h2{font-size:25px}.hint{font-size:18px;line-height:1.5}.note{line-height:1.5} @media(max-width:600px){.lineinner{min-width:560px}.gaprow{margin:0 40px}.equation{gap:10px}main{padding:14px}.slot{width:68px}}
+.demo{background:#f4f9fd;border-radius:18px;padding:10px;margin:12px 0}.demo svg{display:block;width:100%;height:auto;min-width:520px}.demowrap{overflow:auto}.livecount{display:flex;align-items:center;justify-content:center;gap:12px;font-size:26px;font-weight:bold;min-height:90px}.livecount .value{font-size:30px}.demo .actions{margin:6px 0}.demo button:disabled{opacity:.65;cursor:default}.demoresult{display:flex;gap:14px;align-items:center;justify-content:center;min-height:42px;font-size:23px}.demoresult b{color:#12627c}.compactmemory{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;font-size:21px}.compactmemory span{background:#edf4fc;padding:12px;border-radius:12px}.moving{fill:#efad26;stroke:#664405;stroke-width:3}.conceptlink{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0;font-size:23px}.conceptlink .fraction{gap:4px}.conceptlink .value{min-height:38px}.conceptlink .mapped{background:#ffe9a4;border:2px solid #9b6900;border-radius:8px}.conceptlabel{font-size:19px;font-weight:bold}.workingparts{color:#12627c}.extraParts{color:#9c377d}.partanswer{display:flex;align-items:center;justify-content:center;gap:18px;font-size:27px;margin:16px 0}.questionanchor{font-size:19px;margin:10px 0 0}.flight{position:fixed;z-index:20;background:#ffe9a4;border:2px solid #9b6900;border-radius:8px;font:bold 28px Arial;padding:4px 12px;pointer-events:none}.livecount{min-height:70px;font-size:23px}.conceptlink .smallfrac .value{font-size:25px}.demogoal{font-size:19px;text-align:center;margin:4px 0}.demoresult{display:block;min-height:0}</style></head><body><main><header><h1>Improper fractions · Number lines</h1><span id="progress"></span><button id="read" class="secondary small">Read aloud</button></header><section id="screen"></section><div id="feedback" role="status" aria-live="polite"></div><footer><span class="small">Take your time. You can use paper.</span><button id="restart" class="secondary small">Start again</button></footer></main><script>
+
+'use strict';
+const $=id=>document.getElementById(id);
+let q,original,phase='test',streak=0,used=new Set(),last='',step='d',selected=new Set(),earned={},active=null,local=false,recall=false,utterance;
+let demoCount=0,demoBusy=false,demoEpoch=0,repairDemo=false;
+const total=()=>q.w*q.d+q.r;
+function newQ(){if(used.size>=26)used.clear();let z;do{let d=[3,4,5][Math.floor(Math.random()*3)];z={w:1+Math.floor(Math.random()*3),d,r:1+Math.floor(Math.random()*(d-1)),letter:['E','F','A','B'][Math.floor(Math.random()*4)]};z.key=[z.w,z.d,z.r].join('-')}while(used.has(z.key)||z.key===last);used.add(z.key);last=z.key;return z}
+function button(id,t,secondary=false){return `<button id="${id}" ${secondary?'class="secondary"':''}>${t}</button>`}
+function input(id,label){return `<input id="${id}" aria-label="${label}" inputmode="numeric" maxlength="3" autocomplete="off">`}
+function fraction(n,d){return `<span class="fraction smallfrac"><span class="value">${n}</span><span class="bar"></span><span class="value">${d}</span></span>`}
+function answer(){return `<div class="answer"><b>${q.letter} =</b><span class="fraction">${input('n','Numerator')}<span class="bar"></span>${input('d','Denominator')}</span></div>`}
+function line({zero=false,mark=false,show='',full=false}={}){
+ const start=zero?0:q.w, end=full?Math.max(4,q.w+1):q.w+1, count=(end-start)*q.d, width=mark||show?Math.max(600,count*44+80):760, x=i=>40+i*(width-80)/count;
+ let ticks='',gaps='';
+ for(let i=0;i<=count;i++){let whole=i%q.d===0; ticks+=`<line x1="${x(i)}" x2="${x(i)}" y1="${whole?88:97}" y2="${whole?126:117}" stroke="#20334b" stroke-width="${whole?3:2}"/>${whole?`<text x="${x(i)}" y="156" text-anchor="middle" font-size="25" font-weight="bold">${start+i/q.d}</text>`:''}`}
+ for(let i=0;i<count;i++){let abs=start*q.d+i;let marked=show==='d'?abs>=q.w*q.d&&abs<(q.w+1)*q.d:show==='w'?abs<q.w*q.d:show==='n'?abs<total():selected.has(abs);gaps+=`<button data-gap="${abs}" aria-label="Space ${i+1} from the left" aria-pressed="${marked}" ${mark?'':'disabled'} class="${marked&&!mark?'shown':''}">${marked?(show? (show==='d'?i+1:abs+1):'✓'):'⌒'}</button>`}
+ const px=x(total()-start*q.d);
+ return `<div class="linewrap"><div class="lineinner" style="min-width:${mark||show?width:560}px"><svg viewBox="0 0 ${width} 175" role="img" aria-label="Number line from ${start} to ${end}. Point ${q.letter} is marked above a tick."><line x1="20" x2="${width-20}" y1="107" y2="107" stroke="#20334b" stroke-width="3"/>${ticks}<text x="${px}" y="30" text-anchor="middle" font-size="27" font-weight="bold" fill="#9c377d">${q.letter}</text><path d="M${px} 39 V88 l-5 -9 m5 9 l5 -9" fill="none" stroke="#9c377d" stroke-width="3"/></svg>${mark||show?`<div class="gaprow" style="margin:0 ${4000/width}%">${gaps}</div>`:''}</div></div>${mark?'<p class="caption">Each box sits below one space. Tap again to undo. Scroll sideways if needed.</p>':''}`;
+}
+function memory(){return `<div class="compactmemory"><span><b>Denominator</b><br>Spaces in 1 whole</span><span><b>Numerator</b><br>Whole parts + remaining parts</span></div>`}
+
+function demoConfig(k){const repair=phase==='recall';return {k,repair,start:k==='d'?q.w:0,end:k==='d'?q.w+1:q.w+1,limit:k==='d'?q.d:k==='w'?q.w*q.d:total(),base:!repair&&k==='n'?q.w*q.d:0}}
+function demoHTML(k,repair=false){
+ const c=demoConfig(k),count=(c.end-c.start)*q.d,x=i=>40+i*680/count,done=demoCount===c.limit;let svg='';
+ for(let i=0;i<count;i++){
+ const complete=i<demoCount,col=k==='d'||i<q.w*q.d?'#24739c':'#a23c82';
+ svg+=`<rect id="tile${i}" x="${x(i)+2}" y="154" width="${680/count-4}" height="37" rx="5" fill="${complete?col:'#e1eaf2'}"/><path id="arc${i}" d="M${x(i)} 116 Q${x(i+.5)} 55 ${x(i+1)} 116" fill="none" stroke="${col}" stroke-width="4" opacity="${complete?1:0}"/>`;
+ }
+ for(let i=0;i<=count;i++){let whole=i%q.d===0;svg+=`<line x1="${x(i)}" x2="${x(i)}" y1="${whole?106:116}" y2="140" stroke="#20334b" stroke-width="${whole?3:2}"/>${whole?`<text x="${x(i)}" y="220" text-anchor="middle" font-size="26" font-weight="bold">${c.start+i/q.d}</text>`:''}`;
+ if(k!=='d'&&whole&&i>0&&i<=demoCount)svg+=`<text x="${x(i)}" y="250" text-anchor="middle" font-size="19" fill="#12627c">${i} parts</text>`;
+ }
+ let target=total()-c.start*q.d;
+ svg+=`<text x="${x(target)}" y="32" text-anchor="middle" fill="#9c377d" font-size="26" font-weight="bold">${q.letter}</text><path d="M${x(target)} 40 V87 l-5 -8 m5 8 l5 -8" stroke="#9c377d" stroke-width="3" fill="none"/>`;
+ if(k==='d')svg+=`<path d="M40 240 v12 H720 v-12" stroke="#24739c" stroke-width="3" fill="none"/><text x="380" y="280" text-anchor="middle" font-size="24" fill="#12627c">1 whole</text>`;
+ const instruction=k==='d'?'Find the denominator.':k==='w'?`Include the ${q.w} ${q.w===1?'whole':'wholes'} before ${q.letter}.`:`Find the numerator for ${q.letter}.`;
+ let result='';
+ if(k==='d')result=`<div class="conceptlink"><span class="conceptlabel">Use this count<br>↓ denominator</span><span>${q.letter} = <span class="fraction"><span class="value">?</span><span class="bar"></span><span class="value ${done?'mapped':''}">${done?q.d:'?'}</span></span></span></div>`;
+ if(k==='w')result=`<div class="conceptlink"><span>1 = ${fraction(q.d,q.d)}</span>${done?`<span class="workingparts">${q.w} × ${q.d} = ${q.w*q.d} parts</span><span>${q.w} = ${fraction(q.w*q.d,q.d)}</span>`:''}</div>`;
+ if(k==='n')result=`<div class="conceptlink"><b>${q.letter} =</b><span class="workingparts">${fraction(q.w*q.d,q.d)}</span><span>+</span><span class="extraParts">${fraction(done?q.r:'?',q.d)}</span><span>=</span><span><span class="fraction"><span class="value ${done?'mapped':''}">${done?total():'?'}</span><span class="bar"></span><span class="value">${q.d}</span></span></span></div><p class="demogoal">${done?`${q.w*q.d} + ${q.r} = ${total()} parts → numerator`:'Whole parts + remaining parts'}</p>`;
+ return `<p class="questionanchor">What improper fraction does ${q.letter} show?</p><h2>${instruction}</h2><div class="demo"><div class="demowrap"><svg id="demoSvg" viewBox="0 0 760 ${k==='d'?295:270}" role="img" aria-label="A dot moves across equal spaces on the number line."><line x1="25" x2="735" y1="128" y2="128" stroke="#20334b" stroke-width="3"/>${svg}<circle id="dot" class="moving" cx="${x(demoCount)}" cy="116" r="10"/></svg></div><div class="livecount" aria-live="polite">${k==='d'?`<span id="liveN">${demoCount}</span><span>spaces in 1 whole</span>`:`<span class="fraction"><span class="value" id="liveN">${demoCount}</span><span class="bar"></span><span class="value">${q.d}</span></span><span>from 0</span>`}</div><div class="demoresult">${result}</div><div class="actions">${done?button(repair?'localretry':'myturn','Hide it · My turn')+button('replay','Replay',true):button('hop',k==='w'?'Build 1 whole':k==='d'?'Count 1 space':`Add ${q.d===3?'1 third':q.d===4?'1 quarter':'1 fifth'}`)}</div></div>`;
+}
+async function demoHop(){
+ if(demoBusy)return;demoBusy=true;const epoch=demoEpoch,k=phase==='recall'?active:step,c=demoConfig(k),count=(c.end-c.start)*q.d,x=i=>40+i*680/count;
+ const stop=Math.min(c.limit,demoCount+(k==='w'?q.d:1)),reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+ $('hop').disabled=true;
+ while(demoCount<stop){let i=demoCount;
+ await new Promise(resolve=>{let first=null;function frame(t){if(epoch!==demoEpoch){resolve();return}if(first===null)first=t;let f=Math.min(1,(t-first)/(reduced?100:520));$('dot').setAttribute('cx',x(i+f));$('dot').setAttribute('cy',116-(reduced?0:Math.sin(Math.PI*f)*40));if(f<1)requestAnimationFrame(frame);else resolve()}requestAnimationFrame(frame)});
+ if(epoch!==demoEpoch)return;
+ demoCount++;$('liveN').textContent=demoCount;$('tile'+i).setAttribute('fill',k==='d'||i<q.w*q.d?'#24739c':'#a23c82');$('arc'+i).setAttribute('opacity','1');
+ }
+ demoBusy=false;render();if(demoCount===c.limit&&k!=='w')mapCount();$('hop')?.focus({preventScroll:true});
+}
+function mapCount(){
+ const source=$('liveN'),destination=document.querySelector('.mapped');
+ if(!source||!destination||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)return;
+ const a=source.getBoundingClientRect(),b=destination.getBoundingClientRect(),token=document.createElement('span');token.className='flight';token.textContent=destination.textContent;token.style.left=a.left+'px';token.style.top=a.top+'px';document.body.append(token);
+ const motion=token.animate([{transform:'translate(0,0)'},{transform:`translate(${b.left-a.left}px,${b.top-a.top}px)`}],{duration:850,easing:'ease-in-out'});
+ motion.onfinish=()=>token.remove();motion.oncancel=()=>token.remove();
+}
+function componentAnswer(k){return `<div class="partanswer"><b>${q.letter} =</b><span class="fraction">${k==='n'?input('v','Numerator'):'<span class="value">?</span>'}<span class="bar"></span>${k==='d'?input('v','Denominator'):`<span class="value">${q.d}</span>`}</span></div>`}
+function explanation(k){if(k==='d')return `${q.d} equal spaces make one whole. The ${q.d+1} lines are its edges. Write ${q.d} below the fraction line.`;if(k==='w')return `Each whole has ${q.d} parts. ${q.w} ${q.w===1?'whole has':'wholes have'} ${q.w} × ${q.d} = ${q.w*q.d} parts.`;return `Include the ${q.w*q.d} parts in the whole ${q.w===1?'number':'numbers'}, then the ${q.r} more parts to ${q.letter}.`}
+function showTeaching(k){step=k;phase='teach';demoCount=k==='n'?q.w*q.d:0;demoBusy=false;selected.clear();render()}
+function startHelp(k='d'){streak=0;original={...q};earned=k==='d'?{}:{d:q.d};recall=false;showTeaching(k)}
+function render(){document.querySelectorAll('.flight').forEach(e=>e.remove());demoEpoch++;demoBusy=false;if('speechSynthesis'in window)speechSynthesis.cancel();$('feedback').textContent='';$('progress').textContent=`Independent answers: ${streak} / 3`;let h='';
+ if(phase==='test'||phase==='original')h=`<h2>What improper fraction does ${q.letter} show?</h2>${line({full:true})}${answer()}<div class="actions">${button('check','Check')}${button('help','Help me',true)}</div>`;
+ if(phase==='teach')h=demoHTML(step);
+ if(phase==='part'){
+ if(step==='d')h=`<h2>Write the denominator for ${q.letter}.</h2>${line()}${componentAnswer('d')}<div class="actions">${button('check','Check')}</div>`;
+ if(step==='w')h=`<h2>Write ${q.w} as a fraction.</h2>${line({zero:true})}<div class="equation">${q.w} = <span class="fraction">${input('v','Number of fractional parts in the whole numbers')}<span class="bar"></span><span class="value">${q.d}</span></span></div><div class="actions">${button('check','Check')}</div>`;
+ if(step==='n')h=`<h2>Write the numerator for ${q.letter}.</h2>${line()}${componentAnswer('n')}<div class="actions">${button('check','Check')}</div>`;
+ }
+ if(phase==='connect')h=`<h2>Put the method together</h2>${line({zero:true})}<div class="worked"><span>1 whole = ${q.d} parts</span><span>${q.w} × ${q.d} = ${q.w*q.d}</span><span>${q.w*q.d} + ${q.r} = ${total()}</span></div><div class="answer">${q.letter} = ${fraction(total(),q.d)}</div>${memory()}<div class="actions">${button('recall','Hide the method · My turn')}</div>`;
+ if(phase==='recall'){
+ let title=local?'Build this part again':!active?'Choose the answer box to work on.':`Show how you found the ${active==='d'?'denominator':'numerator'}.`;
+ h=`<h2>Use the method from memory</h2><p class="hint"><b>${title}</b>${active&&!local?'<br>Mark the spaces you used, then enter your number.':''}</p>${local?'':line({zero:true,mark:!!active})}`;
+ if(local)h+=demoHTML(active,true);
+ let slot=k=>earned[k]!=null?`<span class="value">${earned[k]}</span>`:active===k&&!local?input(k,k==='d'?'Denominator':'Numerator'):`<button class="slot" data-slot="${k}" aria-label="${k==='d'?'Denominator':'Numerator'} box" ${active||local?'disabled':''}>?</button>`;
+ h+=`<div class="answer">${q.letter} = <span class="fraction">${slot('n')}<span class="bar"></span>${slot('d')}</span></div>`;
+ for(let k of ['d','n'])if(earned[k]!=null)h+=`<div class="record">✓ ${k==='d'?'One whole':'0 to '+q.letter}: ${earned[k]} equal spaces</div>`;
+ h+=`<div class="actions">${local?'':active?button('check','Check'):''}</div>`;
+ }
+ if(phase==='remember')h=`<h2>✓ You connected the whole method</h2>${line({zero:true})}<div class="worked"><span>One whole: ${earned.d} spaces</span><span>0 to ${q.letter}: ${earned.n} parts</span></div><div class="answer">${q.letter} = ${fraction(earned.n,earned.d)}</div>${memory()}<div class="actions">${button('retry','Try the first question without help')}</div>`;
+ if(phase==='success')h=`<h2>✓ Your fraction matches ${q.letter}.</h2>${line({full:true})}<div class="answer">${q.letter} = ${fraction(earned.n,earned.d)}</div><div class="actions">${button('next','Next question')}</div>`;
+ if(phase==='done')h=`<h2>✓ Three new questions without help!</h2><p>Next time, try a number-line question on paper and use the method from memory.</p><div class="actions">${button('again','Practise again')}</div>`;
+ $('screen').innerHTML=h;bind();document.querySelector('input:not(:disabled)')?.focus({preventScroll:true});
+}
+function msg(t){$('feedback').textContent=t}
+function val(id){let s=$(id).value.trim();if(!/^\d{1,3}$/.test(s)){msg('Enter a whole number in each highlighted box.');$(id).focus();return null}return Number(s)}
+function check(){
+ if(phase==='test'||phase==='original'){let n=val('n'),d=val('d');if(n===null||d===null)return;
+ if(d>0&&n*q.d===total()*d){earned={n,d};if(phase==='test')streak++;phase=streak===3?'done':'success';render()}
+ else startHelp(d!==q.d?'d':'w');
+ }else if(phase==='part'){let v=val('v');if(v===null)return;if(v!==(step==='d'?q.d:step==='w'?q.w*q.d:total())){showTeaching(step);return}earned[step]=v;if(step==='d')showTeaching('w');else if(step==='w')showTeaching('n');else{phase='connect';render()}}
+ else if(phase==='recall'){
+ let v=val(active);if(v===null)return;if(!selected.size){msg('Mark the spaces you used before checking.');return}
+ let sorted=[...selected].sort((a,b)=>a-b),valid=active==='d'?sorted.length===q.d&&sorted[0]%q.d===0&&sorted.every((x,i)=>x===sorted[0]+i):sorted.length===total()&&sorted.every((x,i)=>x===i);
+ if(!valid||v!==(active==='d'?q.d:total())){local=true;demoCount=0;selected.clear();render();return}
+ earned[active]=v;active=null;selected.clear();if(earned.d&&earned.n)phase='remember';render();
+ }
+}
+function on(id,f){if($(id))$(id).onclick=f}
+function bind(){
+ on('hop',demoHop);on('replay',()=>{demoCount=phase==='teach'&&step==='n'?q.w*q.d:0;render()});
+ on('check',check);on('help',()=>startHelp());on('myturn',()=>{phase='part';selected.clear();render()});
+ on('marks',()=>{if(!selected.size){msg('Tap the boxes below the spaces first.');return}if(selected.size!==q.d){showTeaching('d');return}showTeaching('w')});
+ on('recall',()=>{q=newQ();earned={};active=null;selected.clear();local=false;phase='recall';render()});
+ on('localretry',()=>{local=false;selected.clear();render()});
+ on('retry',()=>{q={...original};earned={};selected.clear();phase='original';render()});
+ on('next',()=>{q=newQ();earned={};phase='test';render()});on('again',restart);
+ document.querySelectorAll('[data-slot]').forEach(e=>e.onclick=()=>{active=e.dataset.slot;selected.clear();render()});
+ document.querySelectorAll('[data-gap]:not(:disabled)').forEach(e=>e.onclick=()=>{let i=Number(e.dataset.gap);selected.has(i)?selected.delete(i):selected.add(i);e.setAttribute('aria-pressed',selected.has(i));e.textContent=selected.has(i)?'✓':'⌒'});
+ document.querySelectorAll('input').forEach(e=>e.onkeydown=event=>{if(event.key==='Enter'){event.preventDefault();check()}});
+}
+function restart(){used.clear();streak=0;q=newQ();earned={};selected.clear();active=null;local=false;phase='test';render()}
+$('restart').onclick=restart;
+$('read').onclick=()=>{if(!('speechSynthesis'in window)){msg('Read aloud is unavailable. You can follow the words on screen.');return}speechSynthesis.cancel();utterance=new SpeechSynthesisUtterance($('screen').innerText);utterance.lang='en-GB';utterance.rate=.85;utterance.onerror=()=>msg('Read aloud is unavailable on this device. Follow the words on screen.');speechSynthesis.speak(utterance)};
+restart();
+</script></body></html>
